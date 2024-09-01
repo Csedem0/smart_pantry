@@ -120,9 +120,11 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
 
-import os.path
-STATIC_URL = 'static/'
-STATICFILES_DIRS=(os.path.join('./accounts/static'),)
+# Define STATIC_URL
+STATIC_URL = '/static/'
+
+# Define STATIC_ROOT
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 LOGIN_REDIRECT_URL = '/accounts/'
 
 # Default primary key field type
